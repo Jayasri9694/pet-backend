@@ -18,8 +18,11 @@ app.use(cors({
   origin: 'http://localhost:3000'
 }));
 
+// Use the user routes
+app.use('/api/user', userRoutes);
+
 // Routes
-app.use('/api/users', userRoutes);
+
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/pets', require('./routes/petRoutes'));
 app.use('/api/applications', require('./routes/applicationRoutes'));
