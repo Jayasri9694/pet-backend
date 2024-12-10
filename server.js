@@ -16,7 +16,7 @@ app.get('/', (_req, res) => {
   });
   
 app.use(cors({
-  origin: 'http://localhost:3000'
+  origin: 'http://localhost:5173'
 }));
 
 // Use the user routes
