@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
+
 dotenv.config();
 connectDB();
 
@@ -19,11 +20,9 @@ app.use(cors({
 }));
 
 // Use the user routes
-app.use('/api/user', userRoutes);
+app.use('/api/users', userRoutes);
 
 // Routes
-
-app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/pets', require('./routes/petRoutes'));
 app.use('/api/applications', require('./routes/applicationRoutes'));
 
