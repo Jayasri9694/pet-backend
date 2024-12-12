@@ -17,13 +17,14 @@ app.get('/', (_req, res) => {
   });
   
 app.use(cors({
-  origin: 'http://localhost:5173'
+  origin: ['http://localhost:5173']
 }));
 
 // Use the user routes
 app.use('/api/users', userRoutes);
 
 // Routes
+app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/pets', require('./routes/petRoutes'));
 app.use('/api/applications', require('./routes/applicationRoutes'));
 
