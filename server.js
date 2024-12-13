@@ -17,7 +17,7 @@ app.get('/', (_req, res) => {
   });
   
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://splendorous-swan-913d16.netlify.app/'],
+  origin: 'http://localhost:5173',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
